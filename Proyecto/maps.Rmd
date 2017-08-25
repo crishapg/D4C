@@ -1,0 +1,34 @@
+---
+title: ""
+date: ""
+---
+
+```{r setup, include=FALSE}
+setwd("C:/Users/crish/OneDrive/Documents/D4C")
+
+library(xlsx)
+coordenadas <- read.xlsx("coordenadas.xlsx", 1)
+mexico_city  <- read.xlsx("coordenadas.xlsx", 2)
+
+```
+
+## Mapa con coordenadas seleccionadas
+
+```{r, message==FALSE, warning=FALSE, echo=FALSE}
+library(leaflet)
+library(htmltools)
+#leaflet(coordenadas)
+
+m <- leaflet(coordenadas)%>%  
+  addTiles()%>%
+  addPolygons(coordenadas, lat=~cdmxlat, lng=~cdmxlng, fillOpacity = 0) %>%
+  #addPolylines(agebs@polygons, color="orange")
+  addCircleMarkers(lat=~latitud, lng=~longitude, popup=~htmltools::htmlEscape(nombre), weight=0, radius=6, 
+                   fillColor = ~color, fillOpacity = 0.6)
+  #addLegend(color = ~color, labels =~leyenda )
+#addLegend("bottomright", pal=~color, values = ~leyenda, title = "", opacity = 1)
+                   #clusterOptions = markerClusterOptions())
+m
+
+```
+

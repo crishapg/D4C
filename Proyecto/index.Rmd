@@ -1,0 +1,11 @@
+---
+title: "Data 4 Climate"
+date: "August 24, 2017"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Acá explicamos de qué se trata el proyecto
+
