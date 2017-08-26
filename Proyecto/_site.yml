@@ -2,9 +2,9 @@ name: "Data 4 Climate"
 navbar:
   title: "Intro"
   left:
-    - text: "Coordenadas seleccionadas"
-      href: maps.html
-    - text: "Metodologia"
-      href: metodologia.html
-    - text: "Resultados"
-      href: resultados.html
+  - text: "Coordenadas seleccionadas"
+    href: maps.html
+  - text: "Metodologia"
+    href: metodologia.html
+  - text: "Resultados"
+    href: resultados.html

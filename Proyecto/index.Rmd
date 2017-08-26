@@ -7,5 +7,5 @@ date: "August 24, 2017"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Acá explicamos de qué se trata el proyecto
+#Acá explicamos de qué se trata el proyecto
 
