@@ -1,6 +1,6 @@
 name: "Data 4 Climate"
 navbar:
-  title: "Introduction"
+  title: "Intro"
   left:
     - text: "Coordenadas seleccionadas"
       href: maps.html
