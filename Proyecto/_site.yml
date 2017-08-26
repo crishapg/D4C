@@ -4,7 +4,7 @@ navbar:
   left:
     - text: "Coordenadas seleccionadas"
       href: maps.html
-    - text: "Metodología"
+    - text: "Metodologia"
       href: metodologia.html
     - text: "Resultados"
       href: resultados.html
