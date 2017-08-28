@@ -12,23 +12,34 @@ mexico_city  <- read.xlsx("coordenadas.xlsx", 2)
 
 ```
 
-## Mapa con coordenadas seleccionadas
+### Mapa con coordenadas seleccionadas
 
 ```{r, message==FALSE, warning=FALSE, echo=FALSE}
+
 library(leaflet)
 library(htmltools)
-#leaflet(coordenadas)
 
-m <- leaflet(coordenadas)%>%  
+m1<- leaflet(coordenadas)%>%  
   addTiles()%>%
   addPolygons(coordenadas, lat=~cdmxlat, lng=~cdmxlng, fillOpacity = 0) %>%
-  #addPolylines(agebs@polygons, color="orange")
   addCircleMarkers(lat=~latitud, lng=~longitude, popup=~htmltools::htmlEscape(nombre), weight=0, radius=6, 
                    fillColor = ~color, fillOpacity = 0.6)
-  #addLegend(color = ~color, labels =~leyenda )
-#addLegend("bottomright", pal=~color, values = ~leyenda, title = "", opacity = 1)
-                   #clusterOptions = markerClusterOptions())
-m
+m1
+```
 
+
+
+###Versión 2 - con clusters
+
+```{r, warning=FALSE, echo=FALSE}
+
+m2<- leaflet(coordenadas)%>%  
+  addTiles()%>%
+  addPolygons(coordenadas, lat=~cdmxlat, lng=~cdmxlng, fillOpacity = 0) %>%
+  addCircleMarkers(lat=~latitud, lng=~longitude, popup=~htmltools::htmlEscape(nombre), weight=0, radius=6, 
+                   fillColor = ~color, fillOpacity = 0.6, clusterOptions = markerClusterOptions())
+
+m2  
+```
 ```
 
